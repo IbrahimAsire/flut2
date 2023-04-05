@@ -42,6 +42,10 @@ class QuizScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Image.asset(
+                "assets/countries/Italy.png",
+                height: 145,
+              )
             ],
           ),
         ),
