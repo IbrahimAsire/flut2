@@ -43,7 +43,7 @@ class QuizScreen extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Image.asset(
-                "assets/countries/Italy.png",
+                "assets/countries/${countries[9]}.png",
                 height: 145,
               )
             ],
