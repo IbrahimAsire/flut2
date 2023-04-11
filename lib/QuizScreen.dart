@@ -42,7 +42,10 @@ class QuizScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              FlagButton(name: countries[0], onPressed: () {},)
+              FlagButton(
+                name: countries[0],
+                onPressed: () {},
+              )
             ],
           ),
         ),
@@ -52,10 +55,8 @@ class QuizScreen extends StatelessWidget {
 }
 
 class FlagButton extends StatelessWidget {
-  const FlagButton({
-    Key? key, required this.name,
-    required this.onPressed
-  }) : super(key: key);
+  const FlagButton({Key? key, required this.name, required this.onPressed})
+      : super(key: key);
 
   final String name;
   final void Function() onPressed;
