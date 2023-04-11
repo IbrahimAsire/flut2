@@ -42,13 +42,31 @@ class QuizScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              Image.asset(
-                "assets/countries/${countries[9]}.png",
-                height: 145,
-              )
+              FlagButton(name: countries[0], onPressed: () {},)
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class FlagButton extends StatelessWidget {
+  const FlagButton({
+    Key? key, required this.name,
+    required this.onPressed
+  }) : super(key: key);
+
+  final String name;
+  final void Function() onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: onPressed,
+      child: Image.asset(
+        "assets/countries/$name.png",
+        height: 145,
       ),
     );
   }
