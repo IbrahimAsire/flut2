@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class QuizScreen extends StatelessWidget {
@@ -17,6 +19,8 @@ class QuizScreen extends StatelessWidget {
     "US",
   ];
 
+  int num = Random().nextInt(12);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +31,8 @@ class QuizScreen extends StatelessWidget {
             children: [
               SizedBox(height: 16),
               Text(
-                "Guess The Flag?",
+                // "Guess The Flag?",
+                countries[num],
                 style: TextStyle(
                   fontSize: 22,
                   color: Colors.white,
@@ -42,6 +47,7 @@ class QuizScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              for(int i=0; i<3; i++)
               FlagButton(
                 name: countries[0],
                 onPressed: () {},
