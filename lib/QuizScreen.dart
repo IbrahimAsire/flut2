@@ -23,6 +23,7 @@ class QuizScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    countries.shuffle(); // to reorder the list by random
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: SafeArea(
@@ -49,7 +50,7 @@ class QuizScreen extends StatelessWidget {
               SizedBox(height: 30),
               for(int i=0; i<3; i++)
               FlagButton(
-                name: countries[0],
+                name: countries[i],
                 onPressed: () {},
               )
             ],
