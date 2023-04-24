@@ -28,8 +28,14 @@ class _QuizScreenState extends State<QuizScreen> {
   int num = Random().nextInt(12);
 
   @override
-  Widget build(BuildContext context) {
+  void initState() { // initState is the function first work on StatefulWidget
+    super.initState();
     countries.shuffle(); // to reorder the list by random
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: SafeArea(
@@ -60,6 +66,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 onPressed: () {
                   setState(() {
                     countries.shuffle();
+                    num = Random().nextInt(3);
                   });
                 },
               )
