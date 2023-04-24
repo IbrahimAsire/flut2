@@ -2,8 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class QuizScreen extends StatelessWidget {
+class QuizScreen extends StatefulWidget {
   QuizScreen();
+
+  @override
+  State<QuizScreen> createState() => _QuizScreenState();
+}
+
+class _QuizScreenState extends State<QuizScreen> {
   List<String> countries = [
     "Estonia",
     "France",
@@ -51,7 +57,11 @@ class QuizScreen extends StatelessWidget {
               for(int i=0; i<3; i++)
               FlagButton(
                 name: countries[i],
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    countries.shuffle();
+                  });
+                },
               )
             ],
           ),
