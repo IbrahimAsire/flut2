@@ -28,7 +28,7 @@ class _QuizScreenState extends State<QuizScreen> {
   int num = Random().nextInt(12);
 
   @override
-  void initState() { // initState is the function first work on StatefulWidget
+  void initState() { // this function is the first work on StatefulWidget
     super.initState();
     countries.shuffle(); // to reorder the list by random
   }
