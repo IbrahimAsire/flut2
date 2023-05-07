@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class QuizScreen extends StatefulWidget {
   QuizScreen();
@@ -64,6 +65,7 @@ class _QuizScreenState extends State<QuizScreen> {
               FlagButton(
                 name: countries[i],
                 onPressed: () {
+                  Fluttertoast.showToast(msg: "test the pressing");
                   setState(() {
                     countries.shuffle();
                     num = Random().nextInt(3);
